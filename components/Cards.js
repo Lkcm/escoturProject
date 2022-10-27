@@ -1,45 +1,55 @@
 import React from 'react'
 import Image from 'next/image'
 import disney from '../assets/images/HomePage/disney.jpg'
-import cruzeiro from '../assets/images/HomePage/cruzeiro.jpg'
+import cruzeiro from '../assets/images/HomePage/cruzeiro.png'
 
 const Cards = () => {
   return (
-    <div className="mx-20 grid -mt-20 grid-cols-3 ">
-      <div className="bg-slate-200 w-[32em] rounded-t-3xl hover:scale-105 shadow-xl ">
-        <Image className="rounded-t-3xl"src={disney}/>
-        <div className="flex flex-col items-center m-4 px-4">
-        <p>Disney Viaje com segurança, qualidade, confiança e competência. A GTA oferece muito mais benefícios para você. Seja para viagens a lazer, estudos ou negócios! Atendimento 24 horas em português, em qualquer parte do mundo, 365 dias no ano. Viaje protegido. Diante de eventuais problemas de saúde, legais, perda de bagagem ou documentos, um simples chamado ativa o mais avançado sistema de assistência para oferecer soluções em qualquer parte do mundo. Um seguro de viagens vai muito além dos destinos obrigatórios.</p>
-        <button className="flex my-3 bg-slate-500 p-4 rounded-lg text-white hover:bg-slate-600">Compre Agora</button>
-        </div>
-        </div>
+    <div className="container mx-auto -mt-20 px-8">
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-6'>
+            <div className='shadow-lg rounded-lg flex flex-col items-center pb-5'>
+              <Image className="rounded-t-lg" src={disney}/>
+              <h3 className="text-3xl font-bold textd-slate-700 mb-3">Disney</h3>
+              <p className='text-lg font-normal text-gray-600 mb-3'>Todos os anos, mais de um milhão de turistas visitam a pequena Caldas Novas. Eles chegam em busca das águas quentes do balneário, considerado a maior estância hidrotermal do mundo. Com temperaturas variando entre 30 e 57 graus, as centenas de piscinas dos hotéis e dos clubes atraem especialmente grupos da terceira idade e famílias com crianças,</p>
+              <button className='bg-slate-500 p-3 rounded-lg'>Saiba mais</button>
+            </div>
 
-        {/* <div className="bg-slate-200 w-[32em] h-80 container  rounded-t-3xl hover:scale-105 shadow-xl ">
-         <div className="w-10">
-         <Image className="object-cover object-center" src={cruzeiro}/>
-         </div>
-        
-        <p>Disney Viaje com segurança, qualidade, confiança e competência. A GTA oferece muito mais benefícios para você. Seja para viagens a lazer, estudos ou negócios! Atendimento 24 horas em português, em qualquer parte do mundo, 365 dias no ano. Viaje protegido. Diante de eventuais problemas de saúde, legais, perda de bagagem ou documentos, um simples chamado ativa o mais avançado sistema de assistência para oferecer soluções em qualquer parte do mundo. Um seguro de viagens vai muito além dos destinos obrigatórios.</p>
-        <button className="flex my-3 bg-slate-500 p-4 rounded-lg text-white hover:bg-slate-600">Compre Agora</button>
+            <div className='shadow-lg rounded-lg flex flex-col items-center pb-5 hover:scale-105'>
+              <Image className="rounded-t-lg" src={cruzeiro}/>
+              <h3 className="text-3xl font-bold textd-slate-700 mb-3">Cruzeiro</h3>
+              <p className='text-lg font-normal text-gray-600 mb-10'>Faça a viagem dos seus sonhos com estilo, privacidade, luxo e conforto. Confira. Parcele em 10x Sem Juros. Ofertas Especiais. Pacotes para o Réveillon. Cruzeiros Internacionais. Destinations: Nordeste, América do Sul, Argentina, Brasil, Uruguai, Caribe, Mediterrâneo, Norte da Europa, Cuba.</p>
+              <button className='bg-slate-500 p-3 rounded-lg hover:bg-slate-600'>Saiba mais</button>
+            </div>
 
-        </div> */}
+            <div className='shadow-lg rounded-lg flex flex-col items-center pb-5'>
+              <Image className="rounded-t-lg" src={disney}/>
+              <h3 className="text-3xl font-bold textd-slate-700 mb-3">Disney</h3>
+              <p className='text-lg font-normal text-gray-600 mb-3'>Todos os anos, mais de um milhão de turistas visitam a pequena Caldas Novas. Eles chegam em busca das águas quentes do balneário, considerado a maior estância hidrotermal do mundo. Com temperaturas variando entre 30 e 57 graus, as centenas de piscinas dos hotéis e dos clubes atraem especialmente grupos da terceira idade e famílias com crianças,</p>
+              <button className='bg-slate-500 p-3 rounded-lg'>Saiba mais</button>
+            </div>
 
-        <div className="bg-slate-200 w-[32em] rounded-t-3xl hover:scale-105 shadow-xl ">
-        <Image className="rounded-t-3xl"src={disney}/>
-        <div className="flex flex-col items-center m-4 px-4">
-        <p>Disney Viaje com segurança, qualidade, confiança e competência. A GTA oferece muito mais benefícios para você. Seja para viagens a lazer, estudos ou negócios! Atendimento 24 horas em português, em qualquer parte do mundo, 365 dias no ano. Viaje protegido. Diante de eventuais problemas de saúde, legais, perda de bagagem ou documentos, um simples chamado ativa o mais avançado sistema de assistência para oferecer soluções em qualquer parte do mundo. Um seguro de viagens vai muito além dos destinos obrigatórios.</p>
-        <button className="flex my-3 bg-slate-500 p-4 rounded-lg text-white hover:bg-slate-600">Compre Agora</button>
-        </div>
-        </div>
+            <div className='shadow-lg rounded-lg flex flex-col items-center pb-5'>
+              <Image className="rounded-t-lg" src={cruzeiro}/>
+              <h3 className="text-3xl font-bold textd-slate-700 mb-3">Cruzeiro</h3>
+              <p className='text-lg font-normal text-gray-600 mb-3'>Todos os anos, mais de um milhão de turistas visitam a pequena Caldas Novas. Eles chegam em busca das águas quentes do balneário, considerado a maior estância hidrotermal do mundo. Com temperaturas variando entre 30 e 57 graus, as centenas de piscinas dos hotéis e dos clubes atraem especialmente grupos da terceira idade e famílias com crianças,</p>
+              <button className='bg-slate-500 p-3 rounded-lg'>Saiba mais</button>
+            </div>
 
-        <div className="bg-slate-200 w-[32em] rounded-t-3xl hover:scale-105 shadow-xl ">
-        <Image className="rounded-t-3xl"src={disney}/>
-        <div className="flex flex-col items-center m-4 px-4">
-        <p>Disney Viaje com segurança, qualidade, confiança e competência. A GTA oferece muito mais benefícios para você. Seja para viagens a lazer, estudos ou negócios! Atendimento 24 horas em português, em qualquer parte do mundo, 365 dias no ano. Viaje protegido. Diante de eventuais problemas de saúde, legais, perda de bagagem ou documentos, um simples chamado ativa o mais avançado sistema de assistência para oferecer soluções em qualquer parte do mundo. Um seguro de viagens vai muito além dos destinos obrigatórios.</p>
-        <button className="flex my-3 bg-slate-500 p-4 rounded-lg text-white hover:bg-slate-600">Compre Agora</button>
-        </div>
-        </div>
+            <div className='shadow-lg rounded-lg flex flex-col items-center pb-5'>
+              <Image className="rounded-t-lg" src={disney}/>
+              <h3 className="text-3xl font-bold textd-slate-700 mb-3">Disney</h3>
+              <p className='text-lg font-normal text-gray-600 mb-3'>Todos os anos, mais de um milhão de turistas visitam a pequena Caldas Novas. Eles chegam em busca das águas quentes do balneário, considerado a maior estância hidrotermal do mundo. Com temperaturas variando entre 30 e 57 graus, as centenas de piscinas dos hotéis e dos clubes atraem especialmente grupos da terceira idade e famílias com crianças,</p>
+              <button className='bg-slate-500 p-3 rounded-lg'>Saiba mais</button>
+            </div>
 
+            <div className='shadow-lg rounded-lg flex flex-col items-center pb-5'>
+              <Image className="rounded-t-lg" src={cruzeiro}/>
+              <h3 className="text-3xl font-bold textd-slate-700 mb-3">Cruzeiro</h3>
+              <p className='text-lg font-normal text-gray-600 mb-3'>Todos os anos, mais de um milhão de turistas visitam a pequena Caldas Novas. Eles chegam em busca das águas quentes do balneário, considerado a maior estância hidrotermal do mundo. Com temperaturas variando entre 30 e 57 graus, as centenas de piscinas dos hotéis e dos clubes atraem especialmente grupos da terceira idade e famílias com crianças,</p>
+              <button className='bg-slate-500 p-3 rounded-lg'>Saiba mais</button>
+            </div>
+            
+        </div>
     </div>
   )
 }
