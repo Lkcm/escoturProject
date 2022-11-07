@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 import cityVideo from '../assets/videos/city.mp4'
 import cancunVideo from '../assets/videos/cancun.mp4'
@@ -20,43 +20,43 @@ const Slider = () => {
       setLoaded(true)
     },
   },
-  [
-    (slider) => {
-      let timeout
-      let mouseOver = false
-      function clearNextTimeout() {
-        clearTimeout(timeout)
-      }
-      function nextTimeout() {
-        clearTimeout(timeout)
-        if (mouseOver) return
-        timeout = setTimeout(() => {
-          slider.next()
-        }, 10000)
-      }
-      slider.on("created", () => {
-        slider.container.addEventListener("mouseover", () => {
-          mouseOver = true
-          clearNextTimeout()
-        })
-        slider.container.addEventListener("mouseout", () => {
-          mouseOver = false
+    [
+      (slider) => {
+        let timeout
+        let mouseOver = false
+        function clearNextTimeout() {
+          clearTimeout(timeout)
+        }
+        function nextTimeout() {
+          clearTimeout(timeout)
+          if (mouseOver) return
+          timeout = setTimeout(() => {
+            slider.next()
+          }, 10000)
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true
+            clearNextTimeout()
+          })
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false
+            nextTimeout()
+          })
           nextTimeout()
         })
-        nextTimeout()
-      })
-      slider.on("dragStarted", clearNextTimeout)
-      slider.on("animationEnded", nextTimeout)
-      slider.on("updated", nextTimeout)
-    },
-  ]
+        slider.on("dragStarted", clearNextTimeout)
+        slider.on("animationEnded", nextTimeout)
+        slider.on("updated", nextTimeout)
+      },
+    ]
   )
 
   return (
     <>
-    
+
       <div className="navigation-wrapper">
-        
+
         <div ref={sliderRef} className="keen-slider">
           <div className="keen-slider__slide number-slide1">
             <video
@@ -65,33 +65,33 @@ const Slider = () => {
               loop
               controls={false}
               muted
-              autoPlay     
+              autoPlay
             />
-          <h1 className="absolute font-bold text-[20vh]">Chicago</h1>
+            <h1 className="absolute font-bold lg:text-[14rem] md:text-[10rem] text-[4rem]">Chicago</h1>
           </div>
 
-          <div className="keen-slider__slide number-slide2">   
+          <div className="keen-slider__slide number-slide2">
             <video
               src={maceioVideo}
               type="video/mp4"
               loop
               controls={false}
               muted
-              autoPlay     
+              autoPlay
             />
-          <h1 className="absolute font-bold text-[20vh]">Maceió</h1>
+            <h1 className="absolute font-bold lg:text-[14rem] md:text-[10rem] text-[4rem]">Maceió</h1>
           </div>
 
-          <div className="keen-slider__slide number-slide2">   
+          <div className="keen-slider__slide number-slide2">
             <video
               src={cancunVideo}
               type="video/mp4"
               loop
               controls={false}
               muted
-              autoPlay     
+              autoPlay
             />
-          <h1 className="absolute font-bold text-[20vh]">Cancun</h1>
+            <h1 className="absolute font-bold lg:text-[14rem] md:text-[10rem] text-[4rem]">Cancun</h1>
           </div>
 
 
@@ -147,9 +147,8 @@ function Arrow(props) {
   return (
     <svg
       onClick={props.onClick}
-      className={`arrow ${
-        props.left ? "arrow--left" : "arrow--right"
-      } ${disabeld}`}
+      className={`arrow ${props.left ? "arrow--left" : "arrow--right"
+        } ${disabeld}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >
@@ -164,23 +163,23 @@ function Arrow(props) {
 }
 
 
- 
-    // <div className="flex">
-    //   <div className="relative ">
-    //     <video
-    //     src={cityVideo}
-    //     type="video/mp4"
-    //     loop
-    //     controls={false}
-    //     muted
-    //     autoPlay
-    //     className="w-full"        
-    //     />
-    //       <h1 className="text-3xl">Chicago</h1>
-    //   </div>
-      
-      
-    // // </div>
+
+// <div className="flex">
+//   <div className="relative ">
+//     <video
+//     src={cityVideo}
+//     type="video/mp4"
+//     loop
+//     controls={false}
+//     muted
+//     autoPlay
+//     className="w-full"        
+//     />
+//       <h1 className="text-3xl">Chicago</h1>
+//   </div>
+
+
+// // </div>
 
 
 

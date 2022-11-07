@@ -15,14 +15,14 @@ body {
 
 [class^="number-slide"],
 [class*=" number-slide"] {
-  background: grey;
+  background: red;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-weight: 500;
-  height: 600px;
-  max-height: 100vh;
+  min-height: 15rem;
+  max-height: 30rem;
 }
 
 
@@ -89,6 +89,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #fff;
+
 
 
 }

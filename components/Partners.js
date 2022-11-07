@@ -30,52 +30,52 @@ const Partners = () => {
 
   const animation = { duration: 15000, easing: (t) => t }
 
-    const [sliderRef] = useKeenSlider({
-      loop: true,
-      renderMode: "performance",
-      drag: false,
+  const [sliderRef] = useKeenSlider({
+    loop: true,
+    renderMode: "performance",
+    drag: false,
 
-      slides: {
-        perView: 10,
-        spacing: 40,
-      },
-        
-      
-      created(s) {
-        s.moveToIdx(5, true, animation)
-      },
-      updated(s) {
-        s.moveToIdx(s.track.details.abs + 5, true, animation)
-      },
-      animationEnded(s) {
-        s.moveToIdx(s.track.details.abs + 5, true, animation)
-      },
-    })
+    slides: {
+      perView: 9,
+      spacing: 20,
+    },
+
+
+    created(s) {
+      s.moveToIdx(5, true, animation)
+    },
+    updated(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation)
+    },
+    animationEnded(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation)
+    },
+  })
 
   return (
 
-  <div ref={sliderRef} className="keen-slider">
-      <div className="keen-slider__slide logo-slide"><Image src={cvc} alt="logo1"/></div>
-      <div className="keen-slider__slide logo-slide"><Image src={azul} alt="logo2"/></div>
-      <div className="keen-slider__slide logo-slide"><Image src={hotpark} alt="logo3"/></div>
-      <div className="keen-slider__slide logo-slide"><Image src={decolar} alt="logo4"/> </div>
-      <div className="keen-slider__slide logo-slide"><Image src={trend} alt="logo5"/></div>
-      <div className="keen-slider__slide logo-slide"><Image src={msc} alt="logo6"/> </div>
-      <div className="keen-slider__slide logo-slide"><Image src={disney} alt="logo7"/> </div>
-      <div className="keen-slider__slide logo-slide"><Image src={beto} alt="logo8"/></div>
-      <div className="keen-slider__slide logo-slide"><Image src={flytour} alt="logo9"/></div>
-      <div className="keen-slider__slide logo-slide"><Image src={gapnet} alt="logo10"/></div>
-      <div className="keen-slider__slide logo-slide"><Image src={snow} alt="logo11"/></div>
-      <div className="keen-slider__slide logo-slide"><Image src={jose} alt="logo12"/></div>
-      <div className="keen-slider__slide logo-slide"><Image src={beach} alt="logo13"/></div>
-      <div className="keen-slider__slide logo-slide"><Image src={gol} alt="logo14"/></div>
-      <div className="keen-slider__slide logo-slide"><Image src={expedia} alt="logo15"/></div>
-      <div className="keen-slider__slide logo-slide"><Image src={localiza} alt="logo16"/></div>
-      <div className="keen-slider__slide logo-slide"><Image src={pergentino} alt="logo17"/></div>
-      <div className="keen-slider__slide logo-slide"><Image src={royalty} alt="logo18"/></div>
+    <div ref={sliderRef} className="keen-slider">
+      <div className="keen-slider__slide logo-slide"><Image className='scale-110' src={cvc} alt="logo1" /></div>
+      <div className="keen-slider__slide logo-slide"><Image src={azul} alt="logo2" /></div>
+      <div className="keen-slider__slide logo-slide"><Image src={hotpark} alt="logo3" /></div>
+      <div className="keen-slider__slide logo-slide"><Image src={decolar} alt="logo4" /> </div>
+      <div className="keen-slider__slide logo-slide"><Image src={trend} alt="logo5" /></div>
+      <div className="keen-slider__slide logo-slide"><Image src={msc} alt="logo6" /> </div>
+      <div className="keen-slider__slide logo-slide"><Image src={disney} alt="logo7" /> </div>
+      <div className="keen-slider__slide logo-slide"><Image src={beto} alt="logo8" /></div>
+      <div className="keen-slider__slide logo-slide"><Image src={flytour} alt="logo9" /></div>
+      <div className="keen-slider__slide logo-slide"><Image src={gapnet} alt="logo10" /></div>
+      <div className="keen-slider__slide logo-slide"><Image src={snow} alt="logo11" /></div>
+      <div className="keen-slider__slide logo-slide"><Image src={jose} alt="logo12" /></div>
+      <div className="keen-slider__slide logo-slide"><Image src={beach} alt="logo13" /></div>
+      <div className="keen-slider__slide logo-slide"><Image src={gol} alt="logo14" /></div>
+      <div className="keen-slider__slide logo-slide"><Image src={expedia} alt="logo15" /></div>
+      <div className="keen-slider__slide logo-slide"><Image src={localiza} alt="logo16" /></div>
+      <div className="keen-slider__slide logo-slide"><Image src={pergentino} alt="logo17" /></div>
+      <div className="keen-slider__slide logo-slide"><Image src={royalty} alt="logo18" /></div>
 
 
-</div>
+    </div>
   )
 }
 

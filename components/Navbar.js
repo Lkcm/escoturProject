@@ -9,7 +9,7 @@ const Navbar = ({ color, position_shadow }) => {
   return (
     <div>
 
-      <div className={`flex ${position_shadow} z-10 w-full justify-between`}>
+      <div className={`flex ${position_shadow} z-10 w-full lg:justify-between justify-center`}>
         <Link href="/">
           <img
             src="https://www.escotur.com.br/gallery_gen/4aa713203cefafb7eb1023da6a553037_800x320.png"
@@ -23,7 +23,7 @@ const Navbar = ({ color, position_shadow }) => {
           <div className={`flex gap-6 ${color}`}>
             <Link href="/">
 
-              <a>
+              <a >
                 Pagina Inicial
               </a>
             </Link>
