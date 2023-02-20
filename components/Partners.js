@@ -36,8 +36,8 @@ const Partners = () => {
     drag: false,
 
     slides: {
-      perView: 9,
-      spacing: 20,
+      perView: 11,
+      spacing: 40,
     },
 
 

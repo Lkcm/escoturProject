@@ -91,7 +91,7 @@ const Slider = () => {
               muted
               autoPlay
             />
-            <h1 className="absolute font-bold lg:text-[14rem] md:text-[10rem] text-[4rem]">Cancun</h1>
+            <h1 className="absolute font-bold lg:text-[14rem] md:text-[10rem] text-[4rem]">Cancún</h1>
           </div>
 
 
